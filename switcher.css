@@ -1,0 +1,125 @@
+:root{
+    --dark-grey : #121212;
+    --white     : #f8f8f8;
+    --indigo-100: #e0e0e0;
+    --indigo-600: #2a2a2a;
+    --indigo-900: #bb86fc;
+  
+}
+
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--white);
+    font-family: sans-serif;
+    margin: 0;
+}
+ body.dark {
+     background-color: var(--dark-grey);
+     color: var(--white)
+
+ }
+
+ nav {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: var(--white);
+     width: 100%;
+     height: 64px;
+     border-bottom: solid 2px var(--indigo-100);
+ }
+
+ body.dark nav {
+     background-color: var(--indigo-600);
+     border-bottom: solid 1px #4b4b4b;
+
+ }
+
+.nav-link a {
+     color: var(--indigo-600);
+     font-weight: 500;
+     font-size: 20px;
+     text-decoration: none;
+     cursor: pointer;
+     padding-right: 2.5rem;
+ }
+ 
+ body.dark .nav-link a {
+     color: var(--white);
+
+ }
+
+ strong {
+     color: var(--indigo-900);
+     font-size: 20px;
+ }
+ body.dark strong {
+     color: var(--indigo-900);
+
+ }
+ .checkbox {
+     opacity:0;
+     top: 5;
+     right: 5;
+     position: absolute;
+ }
+ label {
+     background-color: var(--indigo-900);
+     border-radius: 50px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 5px;
+     position: relative;
+     height: 18px;
+     width: 48px;
+     transform: scale(1.25);
+ }  
+ .ball {
+     background-color: white;
+     border-radius: 50%;
+     position: absolute;
+     top: 3px;
+     left: 3px;
+     height: 22px;
+     width: 22px;
+     transform: translateX(0px);
+     transition: transform 0.2s linear;
+
+ }
+ .checkbox:checked + .label .ball {
+     transform: translateX(28px);
+ }
+ main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     width: 60vw;
+     margin: 7% auto;
+ }
+
+ main p {
+     line-height: 1.4;
+     font-size: 21px;
+
+ }
+button {
+    background-color: var(--indigo-900);
+    color: var(--white);
+    border: 2px solid var(--indigo-900);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: lowercase;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 240px;
+    padding: 15px 33px;
+    margin: 2rem auto;
+    transition: all 0.2s linear;
+    font-family: sans-serif;
+
+} 
